@@ -1,0 +1,11 @@
+[alias]
+  br = branch
+  co = checkout
+  ci = commit
+  st = status
+  last = log -1 HEAD
+  c = rev-parse --abbrev-ref HEAD
+
+[user]
+  name = levelone
+  email = marc17seifert@gmail.com
