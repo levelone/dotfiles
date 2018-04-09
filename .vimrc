@@ -1,5 +1,8 @@
 execute pathogen#infect()
 syntax on
+colorscheme paramount-gray-green
+filetype off
+filetype on
 filetype plugin indent on
 
 " Vim Default
@@ -39,7 +42,7 @@ map gu <plug>NERDCommenterUncomment<cr>
 " Ctrl+P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-" Use Silver Searcher
+" Silver Searcher
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
@@ -57,3 +60,8 @@ map <space>k <Plug>(easymotion-k)
 map <space>h <Plug>(easymotion-linebackward)
 map <space>l <Plug>(easymotion-lineforward)
 map <space><space> <Plug>(easymotion-bd-jk)
+
+" Coffee Syntax
+hi link coffeeSpaceError NONE
+hi link coffeeSemicolonError NONE
+hi link coffeeReservedError NONE
