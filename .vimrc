@@ -16,9 +16,11 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set timeoutlen=1000 ttimeoutlen=0
-set wrap
+set nowrap
 set ignorecase
 set smartcase
+set hlsearch
+set laststatus=2
 noremap U <C-R>
 
 "WINDOW NAVIGATION
