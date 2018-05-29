@@ -25,6 +25,15 @@ set smartcase
 set hlsearch
 set laststatus=2
 noremap U <C-R>
+nnoremap <esc> :noh<return><esc>
+nnoremap <esc>^[ <esc>^[
+
+"HIGHLIGHT IN ACTIVE BUFFER
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
 
 "HIGHLIGHT IN ACTIVE BUFFER
 augroup CursorLine
