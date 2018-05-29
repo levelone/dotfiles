@@ -1,3 +1,8 @@
+# To ignore future changes:   git update-index --assume-unchanged <file>
+# To undo ignore:             git update-index --no-assume-unchanged <file>
+# To find ignored files:      git ls-files -v|grep '^h'
+#
 # For more information on dotfiles read link below:
 # https://www.foraker.com/blog/get-your-dotfiles-under-control
+# https://stackoverflow.com/questions/7527982/applying-gitignore-to-committed-files
 *
