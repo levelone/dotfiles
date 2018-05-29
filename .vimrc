@@ -1,4 +1,6 @@
 execute pathogen#infect()
+call pathogen#helptags()
+
 syntax on
 colorscheme paramount-gray-green
 filetype off
@@ -6,6 +8,7 @@ filetype on
 filetype plugin indent on
 
 "VIM DEFAULTS
+set tags=./tags,tags;
 set backspace=indent,eol,start
 set expandtab
 set list
@@ -22,6 +25,15 @@ set smartcase
 set hlsearch
 set laststatus=2
 noremap U <C-R>
+nnoremap <esc> :noh<return><esc>
+nnoremap <esc>^[ <esc>^[
+
+"HIGHLIGHT IN ACTIVE BUFFER
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
 
 "WINDOW NAVIGATION
 nnoremap <C-h> <C-w>h
