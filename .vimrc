@@ -1,4 +1,5 @@
 "REFERENCES
+"https://www.devroom.io/2017/03/22/tmux-and-vim-copy-and-paste-on-macos-sierra/
 "https://courses.cs.washington.edu/courses/cse451/10au/tutorials/tutorial_ctags.html
 "https://elliotekj.com/2016/10/30/using-ripgrep-and-fzf-instead-of-the-silver-searcher-and-ctrlp-in-vim/
 
@@ -12,6 +13,7 @@ filetype on
 filetype plugin indent on
 
 "VIM DEFAULTS
+set clipboard=unnamed
 set tags=./tags,tags;
 set backspace=indent,eol,start
 set expandtab
@@ -28,12 +30,13 @@ set ignorecase
 set smartcase
 set hlsearch
 set laststatus=2
-set scroll=10
 set splitbelow
 set splitright
 noremap U <C-R>
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
+nnoremap <C-u> 10k
+nnoremap <C-d> 10j
 
 "ACTIVE BUFFER CURSOR
 augroup CursorLine
@@ -89,3 +92,6 @@ let $FZF_DEFAULT_COMMAND = "rg
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-o> :Files<cr>
 nnoremap <C-b> :Buffer<cr>
+
+"DIM INACTIVE
+let g:diminactive_enable_focus = 1
