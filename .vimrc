@@ -1,3 +1,7 @@
+"REFERENCES
+"https://courses.cs.washington.edu/courses/cse451/10au/tutorials/tutorial_ctags.html
+"https://elliotekj.com/2016/10/30/using-ripgrep-and-fzf-instead-of-the-silver-searcher-and-ctrlp-in-vim/
+
 execute pathogen#infect()
 call pathogen#helptags()
 
@@ -25,6 +29,8 @@ set smartcase
 set hlsearch
 set laststatus=2
 set scroll=10
+set splitbelow
+set splitright
 noremap U <C-R>
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
@@ -73,14 +79,13 @@ let g:NERDTrimTrailingWhitespace = 1
 map gc <plug>NERDCommenterSexy<cr>
 map gu <plug>NERDCommenterUncomment<cr>
 
-"CTRL+P
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-
-"SILVER SEARCHER
-if executable('ag')
-  set grepprg=ag\ --nogroup\ --nocolor
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-  let g:ctrlp_use_caching = 0
-endif
-nnoremap <C-f> :grep! "\b<C-R><C-W>\b"<cr>:cw<cr>
-command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+"FZF SEARCH
+let $FZF_DEFAULT_COMMAND = "rg
+  \ --no-ignore
+  \ --hidden
+  \ --files
+  \ --follow
+  \ --glob '!.git/*'"
+set rtp+=/usr/local/opt/fzf
+nnoremap <C-o> :Files<cr>
+nnoremap <C-b> :Buffer<cr>
