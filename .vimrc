@@ -1,4 +1,5 @@
 "REFERENCES
+"https://stackoverflow.com/questions/11404800/fix-vim-tmux-yank-paste-on-unnamed-register
 "https://www.devroom.io/2017/03/22/tmux-and-vim-copy-and-paste-on-macos-sierra/
 "https://courses.cs.washington.edu/courses/cse451/10au/tutorials/tutorial_ctags.html
 "https://elliotekj.com/2016/10/30/using-ripgrep-and-fzf-instead-of-the-silver-searcher-and-ctrlp-in-vim/
@@ -14,7 +15,6 @@ filetype plugin indent on
 
 "VIM DEFAULTS
 set clipboard=unnamed
-set tags=./tags,tags;
 set backspace=indent,eol,start
 set expandtab
 set list
@@ -82,16 +82,16 @@ let g:NERDTrimTrailingWhitespace = 1
 map gc <plug>NERDCommenterSexy<cr>
 map gu <plug>NERDCommenterUncomment<cr>
 
-"FZF SEARCH
-let $FZF_DEFAULT_COMMAND = "rg
+"FZF RIPGREP SEARCH
+let $FZF_DEFAULT_COMMAND ="rg
   \ --no-ignore
   \ --hidden
   \ --files
   \ --follow
-  \ --glob '!.git/*'"
+  \ --glob '!{node_modules,.git,tmp}/*'"
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-o> :Files<cr>
 nnoremap <C-b> :Buffer<cr>
 
-"DIM INACTIVE
+"DIMINACTIVE
 let g:diminactive_enable_focus = 1

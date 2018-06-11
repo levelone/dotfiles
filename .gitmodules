@@ -49,3 +49,7 @@
 [submodule ".vim/bundle/vim-tmux-clipboard"]
   path = .vim/bundle/vim-tmux-clipboard
   url = https://github.com/roxma/vim-tmux-clipboard
+
+[submodule ".vim/bundle/gist-vim"]
+  path = .vim/bundle/gist-vim
+  url = https://github.com/mattn/gist-vim

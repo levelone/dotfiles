@@ -1,0 +1,18 @@
+# To get list of window layouts use command:
+# tmux list-windows
+
+name: tanda
+root: ~/Projects/payaus
+tmux_detached: false
+windows:
+  - editor:
+      layout: 478f,270x59,0,0[270x39,0,0,1,270x19,0,40{135x19,0,40,4,134x19,136,40,6}]
+      panes:
+        - vim
+        - bundle exec rails c
+        - git status
+  - server:
+      layout: 61d0,270x59,0,0[270x39,0,0,1,270x19,0,40,4]
+      panes:
+        - tanda-server-stop && tanda-server-start
+        - ./useful_scripts/dev-server/start-sync.sh remote marc
