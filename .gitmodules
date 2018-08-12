@@ -57,3 +57,7 @@
 [submodule ".vim/bundle/vim-startify"]
   path = .vim/bundle/vim-startify
   url = https://github.com/mhinz/vim-startify
+
+[submodule ".vim/bundle/vim-ripgrep"]
+  path = .vim/bundle/vim-ripgrep
+  url = https://github.com/jremmen/vim-ripgrep.git
