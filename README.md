@@ -11,3 +11,15 @@ To confirm submodules run:
 ```
 git submodules init & git submodules update
 ```
+
+To add submodules run:
+
+```
+cd ~/.vim/bundle & git submodule add <git_repo>
+```
+
+To remove submodules run:
+
+```
+cd ~/.vim/bundle & git submodule rm <git_repo>
+```
