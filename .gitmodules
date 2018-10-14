@@ -50,10 +50,6 @@
   path = .vim/bundle/vim-tmux-clipboard
   url = https://github.com/roxma/vim-tmux-clipboard
 
-[submodule ".vim/bundle/gist-vim"]
-  path = .vim/bundle/gist-vim
-  url = https://github.com/mattn/gist-vim
-
 [submodule ".vim/bundle/vim-startify"]
   path = .vim/bundle/vim-startify
   url = https://github.com/mhinz/vim-startify
@@ -61,3 +57,11 @@
 [submodule ".vim/bundle/vim-ripgrep"]
   path = .vim/bundle/vim-ripgrep
   url = https://github.com/jremmen/vim-ripgrep.git
+
+[submodule ".vim/bundle/gist-vim"]
+  path = .vim/bundle/gist-vim
+  url = https://github.com/mattn/gist-vim.git
+
+[submodule ".vim/bundle/webapi-vim"]
+  path = .vim/bundle/webapi-vim
+  url = https://github.com/mattn/webapi-vim.git
