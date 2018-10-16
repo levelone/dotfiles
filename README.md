@@ -12,6 +12,7 @@ To confirm submodules run:
 git submodules init & git submodules update
 ```
 
+# Others
 To add submodules run:
 
 ```
