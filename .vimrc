@@ -33,18 +33,19 @@ set hlsearch
 set laststatus=2
 set splitbelow
 set splitright
+set regexpengine=1
 noremap U <C-R>
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
 nnoremap <C-u> 10k
 nnoremap <C-d> 10j
 
-"ACTIVE BUFFER CURSOR
-augroup CursorLine
-  au!
-  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-  au WinLeave * setlocal nocursorline
-augroup END
+" "ACTIVE BUFFER CURSOR (Performance Issues)
+" augroup CursorLine
+"   au!
+"   au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+"   au WinLeave * setlocal nocursorline
+" augroup END
 
 "WINDOW NAVIGATION
 nnoremap <C-h> <C-w>h
