@@ -90,10 +90,11 @@ let $FZF_DEFAULT_COMMAND ="rg
   \ --hidden
   \ --files
   \ --follow
-  \ --glob '!{node_modules,.git,tmp}/*'"
+  \ --glob '!{tags,node_modules,.git,tmp}/*'"
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-o> :Files<cr>
 nnoremap <C-b> :Buffer<cr>
+noremap <C-g> :Rg<space>
 
 "DIMINACTIVE
 let g:diminactive_enable_focus = 1
