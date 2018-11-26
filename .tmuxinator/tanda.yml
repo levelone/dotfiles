@@ -16,3 +16,5 @@ windows:
       panes:
         - tanda-server-stop && tanda-server-start
         - ./useful_scripts/dev-server/start-sync.sh remote marc
+  - activity:
+    - htop
