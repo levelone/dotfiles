@@ -1,15 +1,18 @@
-"REFERENCES
+"VIM REFERENCES
 "https://stackoverflow.com/questions/24617701/installing-vim-with-homebrew-assistance
 "https://stackoverflow.com/questions/11404800/fix-vim-tmux-yank-paste-on-unnamed-register
 "https://www.devroom.io/2017/03/22/tmux-and-vim-copy-and-paste-on-macos-sierra/
 "https://courses.cs.washington.edu/courses/cse451/10au/tutorials/tutorial_ctags.html
 "https://elliotekj.com/2016/10/30/using-ripgrep-and-fzf-instead-of-the-silver-searcher-and-ctrlp-in-vim/
+"https://coderwall.com/p/avmotq/gain-clipboard-support-for-vim-on-os-x
 
+"VIM PATHOGEN
 execute pathogen#infect()
 call pathogen#helptags()
 
+"VIM SYNTAX
 syntax on
-colorscheme paramount-gray-green
+colorscheme tequila-sunrise
 filetype off
 filetype on
 filetype plugin indent on
@@ -93,6 +96,7 @@ let $FZF_DEFAULT_COMMAND ="rg
   \ --glob '!{tags,node_modules,.git,tmp}/*'"
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-o> :Files<cr>
+nnoremap <C-b> :BTags<cr>
 nnoremap <C-b> :Buffer<cr>
 noremap <C-g> :Rg<space>
 

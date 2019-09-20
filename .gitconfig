@@ -12,3 +12,6 @@
 
 [github]
   user = levelone
+
+[core]
+  excludesfile = /Users/marcseifert/.gitignore_global
