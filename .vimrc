@@ -97,8 +97,9 @@ let $FZF_DEFAULT_COMMAND ="rg
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-o> :Files<cr>
 nnoremap <C-b> :BTags<cr>
-nnoremap <C-b> :Buffer<cr>
-noremap <C-g> :Rg<space>
+nnoremap <C-g> :Ag<space>
+nnoremap <C-r> :source ~/.vimrc<cr>
+" nnoremap <C-b> :Buffer<cr>
 
 "DIMINACTIVE
 let g:diminactive_enable_focus = 1
@@ -114,3 +115,9 @@ let g:startify_custom_header = [
 \ '     ╚╝╚═══╝   ╚══════╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝',
 \ '',
 \ ]
+
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+set tags=tags;/

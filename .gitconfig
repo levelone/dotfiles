@@ -14,4 +14,4 @@
   user = levelone
 
 [core]
-  excludesfile = /Users/marcseifert/.gitignore_global
+  excludesfile = /Users/marcseifert/.global_ignore
